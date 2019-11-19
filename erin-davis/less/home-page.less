@@ -1,10 +1,40 @@
 //full page might have to put more class names
+//font-family: 'Anton', sans-serif;
 
 .content{
-  .displayFlex(center; center; 100%; 0;);
+  .b;
+  .displayFlex(center; center; 100%; 0; column;);
+  flex-direction: column;
   border: @border;
   h2{
-    font-family: "Lato", sans-serif;
-    font-size: 2.5rem;
+  .h2;
+  }
+  h3{
+    .h3
+  }
+  .intro{
+    justify-content: space-between;
+    p{
+      font-family: "Poppins", sans-serif;
+    }
+    .top-picture{
+      width:45%;
+      height:45%;
+    }
+  }
+  .mid-picture{
+    width: 75%;
+    height: 75%;
+
+  }
+  .articles{
+    flex-wrap: nowrap;
+    .snippet{
+      width: 40%;
+    }
+  }
+
+  article{
+    border: 2px solid @lightBlue;
   }
 }
