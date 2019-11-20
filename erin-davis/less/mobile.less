@@ -1,0 +1,79 @@
+//tablet first then work down to mobile
+@media @tablet{
+  body{
+    .content{
+      .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .top-picture{
+          width: 60%;
+          margin-left: 19%;
+          margin-right: 19%;
+        }
+        span{
+          width: 75%;
+          margin-left: 12%;
+          margin-right: 12%;
+          h3{
+            padding-bottom: 20px;
+          }
+          button{
+            border-radius: 5px;
+            width: 200px;
+            height: 75px;
+            &:hover{
+              background: @bloodOrange;
+              color: @tan;
+              opacity: 60%;
+            }
+          }
+        }
+      }
+      .articles{
+        display: flex;
+      }
+    }
+  }
+}
+
+
+
+
+//this one is for mobile
+@media @mobile {
+  body{
+    .mid-picture{
+      display: none;
+    }
+    header{
+      background: @mustard;
+      nav{
+        .displayFlex(center;center;80%;0 9%;column;);
+        a{
+          padding: 10px;
+          &:hover{
+            background: @mustard;
+            border: none;
+            padding: 10px;
+          }
+        }
+      }
+      border-bottom: 2px dotted @darkBlue;
+    }
+
+    .articles{
+      border: @border;
+      .displayFlex(center;center;95%;0 2.4%;column;);
+      .snippet{
+        .displayFlex(center;center;80%;0 9%;column;);
+        border: 2px solid @nicePink;
+        width: auto;
+      }
+      article{
+        width: 100%;
+      }
+    }
+  }
+
+}

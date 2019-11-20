@@ -21,6 +21,10 @@
   text-decoration: none;
   font-size: 1.7rem;
 }
+.p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -206,72 +210,136 @@ header h1 {
   font-family: "Lato", sans-serif;
   color: #4056A1;
   font-size: 5rem;
-  padding: 10px;
 }
 header nav {
   background-color: #D79922;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   margin: 0;
   flex-direction: row;
+  padding: 5px 10px;
+  align-items: baseline;
 }
 header nav a {
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   font-size: 1.7rem;
-  margin: 5px;
-  padding: 5px;
+  margin: 0 5px;
+  padding: 0 5px;
   border: 1px solid yellow;
   color: #292D3A;
+  border: none;
+}
+header nav a:hover {
   background: yellow;
+  border-radius: 2px;
+  padding-top: 20px;
 }
 footer {
   background-color: #EFE2BA;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin: 0;
+  flex-direction: row;
+  background-color: #D79922;
+  align-content: center;
+  padding-top: 10px;
 }
-.content {
+footer p {
+  font-family: "Anton", sans-serif;
+  font-size: 1.5rem;
+}
+body {
   background-color: #EFE2BA;
+}
+body .content {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0;
+  margin: 10px 0;
   flex-direction: column;
-  border: 2px solid #F13C20;
+  width: 95%;
+  margin-left: 2.5%;
 }
-.content h2 {
+body .content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+body .content h2 {
   font-family: "Lato", sans-serif;
   font-size: 3rem;
   color: #F13C20;
+  padding: 5px 0;
+  margin: 2px;
 }
-.content h3 {
+body .content h3 {
   font-family: 'Alata', sans-serif;
   font-size: 2.5rem;
   color: #D79922;
 }
-.content .intro {
-  justify-content: space-between;
+body .content .intro {
+  display: flex;
+  flex-direction: row;
 }
-.content .intro p {
-  font-family: "Poppins", sans-serif;
+body .content .intro p {
+  text-align: left;
 }
-.content .intro .top-picture {
-  width: 45%;
-  height: 45%;
+body .content .intro button {
+  border: none;
+  border-radius: 50%;
+  width: 115px;
+  height: 115px;
+  background-color: #F13C20;
+  color: #EFE2BA;
+  font-size: 1.6rem;
+  font-family: "Anton", sans-serif;
+  padding: 5px;
 }
-.content .mid-picture {
-  width: 75%;
-  height: 75%;
+body .content .intro button:hover {
+  background: #4056A1;
+  color: #F13C20;
 }
-.content .articles {
-  flex-wrap: nowrap;
+body .content .intro span {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.content .articles .snippet {
+body .content .intro .top-picture {
   width: 40%;
+  height: 40%;
+  margin: 2.5% 2.5%;
+  padding: 5px 10px;
 }
-.content article {
-  border: 2px solid #C5CBE3;
+body .content .intro span {
+  width: 50%;
+  margin: 2.5% 0;
+}
+body .content .mid-picture {
+  width: 100%;
+  height: auto;
+  margin: 1% 0;
+  padding: 5px 0;
+}
+body .content .articles {
+  display: table;
+  width: 100%;
+}
+body .content .articles .snippet {
+  width: 45%;
+  display: table-cell;
+  padding: 10px 2.5%;
+}
+body .content .articles .snippet h3 {
+  text-align: center;
+  padding: 5px;
+}
+body .content .articles .snippet p {
+  padding: 5px 0;
 }
 img {
   width: 200px;
@@ -279,9 +347,6 @@ img {
 }
 .about-us {
   background-color: #EFE2BA;
-}
-section {
-  border: 2px solid #F13C20;
 }
 section h2 {
   font-family: "Lato", sans-serif;
@@ -293,8 +358,85 @@ section h3 {
   font-size: 2.5rem;
   color: #D79922;
 }
-section article {
-  border: 1px solid #FB8E95;
+@media (max-width: 800px) {
+  body .content .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body .content .intro .top-picture {
+    width: 60%;
+    margin-left: 19%;
+    margin-right: 19%;
+  }
+  body .content .intro span {
+    width: 75%;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  body .content .intro span h3 {
+    padding-bottom: 20px;
+  }
+  body .content .intro span button {
+    border-radius: 5px;
+    width: 200px;
+    height: 75px;
+  }
+  body .content .intro span button:hover {
+    background: #F13C20;
+    color: #EFE2BA;
+    opacity: 60%;
+  }
+  body .content .articles {
+    display: flex;
+  }
+}
+@media (max-width: 500px) {
+  body .mid-picture {
+    display: none;
+  }
+  body header {
+    background: #D79922;
+    border-bottom: 2px dotted #4056A1;
+  }
+  body header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 9%;
+    flex-direction: column;
+  }
+  body header nav a {
+    padding: 10px;
+  }
+  body header nav a:hover {
+    background: #D79922;
+    border: none;
+    padding: 10px;
+  }
+  body .articles {
+    border: 2px solid #F13C20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 0 2.4%;
+    flex-direction: column;
+  }
+  body .articles .snippet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 9%;
+    flex-direction: column;
+    border: 2px solid #FB8E95;
+    width: auto;
+  }
+  body .articles article {
+    width: 100%;
+  }
 }
 @font-face {
   font-family: 'Alata';

@@ -3,19 +3,24 @@
 
 
 header{
-  //border: @border;
   .displayFlex(center; center;100%; 0; row;);
   h1{
   .h1;
-  padding: 10px;
   }
   nav{
     background-color: @mustard;
-    .displayFlex(center; center;100%; 0; row;);
+    .displayFlex(center; flex-end;100%; 0; row;);
+    padding: 5px 10px;
+    align-items: baseline;
     a{
       .a;
-      .text(5px;5px;1px solid yellow; @char;);
-      background: yellow;
+      .text(0 5px;0 5px;1px solid yellow; @char;);
+      border: none;
+      &:hover{
+        background: yellow;
+        border-radius: 2px;
+        padding-top: 20px;
+      }
     }
   }
 }

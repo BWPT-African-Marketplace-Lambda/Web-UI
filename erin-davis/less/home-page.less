@@ -1,40 +1,93 @@
 //full page might have to put more class names
 //font-family: 'Anton', sans-serif;
 
-.content{
+body {
   .b;
-  .displayFlex(center; center; 100%; 0; column;);
-  flex-direction: column;
-  border: @border;
-  h2{
-  .h2;
-  }
-  h3{
-    .h3
-  }
-  .intro{
-    justify-content: space-between;
-    p{
-      font-family: "Poppins", sans-serif;
-    }
-    .top-picture{
-      width:45%;
-      height:45%;
-    }
-  }
-  .mid-picture{
-    width: 75%;
-    height: 75%;
 
-  }
-  .articles{
-    flex-wrap: nowrap;
-    .snippet{
-      width: 40%;
-    }
-  }
+  .content {
+    .displayFlex(center; center; 100%; 10px 0; column;);
+    //border: @border;
+    flex-direction: column;
 
-  article{
-    border: 2px solid @lightBlue;
+    p {
+      .p;
+    }
+
+    h2 {
+      .h2;
+      padding: 5px 0;
+      margin: 2px;
+    }
+
+    h3 {
+      .h3
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: row;
+
+      p {
+        text-align: left;
+      }
+
+      button {
+        border: none;
+        border-radius: 50%;
+        width: 115px;
+        height: 115px;
+        background-color: @bloodOrange;
+        color: @tan;
+        font-size: 1.6rem;
+        font-family: "Anton", sans-serif;
+        padding: 5px;
+
+        &:hover {
+          background: @darkBlue;
+          color: @bloodOrange;
+        }
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .top-picture {
+        .pics(40%; 40%; 2.5% 2.5%; 5px 10px;);
+      }
+
+      span {
+        width: 50%;
+        margin: 2.5% 0;
+      }
+    }
+
+    .mid-picture {
+      .pics(100%; auto; 1% 0; 5px 0;);
+    }
+
+    .articles {
+      display: table;
+      width: 100%;
+
+      .snippet {
+        width: 45%;
+        display: table-cell;
+        padding: 10px 2.5%;
+
+        h3 {
+          text-align: center;
+          padding: 5px;
+        }
+
+        p {
+          padding: 5px 0;
+        }
+      }
+    }
+    width: 95%;
+    margin-left: 2.5%;
   }
 }
