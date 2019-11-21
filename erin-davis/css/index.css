@@ -345,8 +345,63 @@ img {
   width: 200px;
   height: 200px;
 }
+.logo {
+  width: 50px;
+  height: 50px;
+}
 .about-us {
   background-color: #EFE2BA;
+}
+.about-us .main-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 2.4%;
+  flex-direction: column;
+  padding: 5px 0;
+}
+.about-us .main-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+}
+.about-us .people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95%;
+  margin: 0 2.4%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.about-us .people .person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22%;
+  margin: 0;
+  flex-direction: column;
+  padding: 0;
+}
+.about-us .people .person h3 {
+  padding-bottom: 5px;
+}
+.about-us .people .person .prof-pics {
+  width: 90%;
+  height: 90%;
+  padding: 5px;
+}
+.about-us .people .person p {
+  padding: 5px;
+}
+.about-us .people .person a:hover {
+  background-color: #FB8E95;
+  border-radius: 20%;
+  padding: 0;
+  margin: 0;
+}
+.about-us .people .1 p {
+  text-decoration: none;
 }
 section h2 {
   font-family: "Lato", sans-serif;
@@ -390,6 +445,20 @@ section h3 {
   body .content .articles {
     display: flex;
   }
+  .about-us .people {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 2.4%;
+    flex-direction: row;
+    border: 2px solid white;
+    width: 95%;
+  }
+  .about-us .people .person {
+    width: 37%;
+    height: auto;
+    padding: 5px 10px;
+  }
 }
 @media (max-width: 500px) {
   body .mid-picture {
@@ -415,8 +484,22 @@ section h3 {
     border: none;
     padding: 10px;
   }
+  body .content h2 {
+    font-size: 3.5rem;
+  }
+  body .content article span h3 {
+    font-size: 3rem;
+  }
+  body .content .intro span {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 10px 2.5%;
+  }
+  body .content .intro span button {
+    font-size: 2rem;
+  }
   body .articles {
-    border: 2px solid #F13C20;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -431,11 +514,31 @@ section h3 {
     width: 80%;
     margin: 0 9%;
     flex-direction: column;
-    border: 2px solid #FB8E95;
-    width: auto;
-  }
-  body .articles article {
+    width: 0%;
     width: 100%;
+  }
+  body .articles .snippet h3 {
+    font-size: 3rem;
+  }
+  body .content .articles .snippet {
+    width: 100%;
+  }
+  .about-us .people {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 0 2.4%;
+    flex-direction: column;
+  }
+  .about-us .people .person {
+    width: 75%;
+  }
+  .about-us .people .person h3 {
+    font-size: 2rem;
+  }
+  .about-us .people .person p {
+    display: none;
   }
 }
 @font-face {

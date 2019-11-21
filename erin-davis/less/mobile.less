@@ -35,6 +35,22 @@
       }
     }
   }
+  .about-us{
+    .people{
+      .displayFlex(space-around;center;95%; 0 2.4%;row;);
+    //  flex-wrap: wrap;
+      border: 2px solid white;
+    //  display: table;
+      width: 95%;
+      .person{
+        //.displayFlex(center;center; 37%;0;column;);
+        width: 37%;
+        height: auto;
+        padding: 5px 10px;
+      //  border: @border;
+      }
+    }
+  }
 }
 
 
@@ -61,17 +77,53 @@
       }
       border-bottom: 2px dotted @darkBlue;
     }
+    .content h2{
+      font-size: 3.5rem;
+    }
+    .content article span h3{
+      font-size: 3rem;
+    }
+    .content{
+      .intro{
+        span{
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          padding: 10px 2.5%;
+          button{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
 
     .articles{
-      border: @border;
       .displayFlex(center;center;95%;0 2.4%;column;);
       .snippet{
         .displayFlex(center;center;80%;0 9%;column;);
-        border: 2px solid @nicePink;
-        width: auto;
-      }
-      article{
+        width: 0%;
         width: 100%;
+        h3{
+          font-size: 3rem;
+        }
+      }
+
+    }
+    .content .articles .snippet{
+      width: 100%;
+    }
+  }
+  .about-us{
+    .people{
+      .displayFlex(center; center;95%; 0 2.4%; column;);
+      .person{
+        width: 75%;
+        h3{
+          font-size: 2rem;
+        }
+        p{
+          display: none;
+        }
       }
     }
   }
